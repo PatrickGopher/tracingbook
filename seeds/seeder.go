@@ -1,10 +1,10 @@
 package seeds
 
 import (
-	"gohome_self/tracingbook/infrastructure"
-	"gohome_self/tracingbook/models"
 	"math/rand"
 	"time"
+	"tracingbook/infrastructure"
+	"tracingbook/models"
 
 	"github.com/icrowley/fake"
 	"github.com/jinzhu/gorm"

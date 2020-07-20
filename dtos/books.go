@@ -1,9 +1,9 @@
 package dtos
 
 import (
-	"gohome_self/tracingbook/models"
 	"net/http"
 	"time"
+	"tracingbook/models"
 )
 
 type ManagedModel models.Book

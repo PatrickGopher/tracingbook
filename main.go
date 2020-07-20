@@ -2,14 +2,14 @@ package main
 
 import (
 	"fmt"
-	"gohome_self/tracingbook/controllers"
-	"gohome_self/tracingbook/crawler"
-	"gohome_self/tracingbook/infrastructure"
-	"gohome_self/tracingbook/mail"
-	"gohome_self/tracingbook/middlewares"
-	"gohome_self/tracingbook/models"
-	"gohome_self/tracingbook/seeds"
 	"os"
+	"tracingbook/controllers"
+	"tracingbook/crawler"
+	"tracingbook/infrastructure"
+	"tracingbook/mail"
+	"tracingbook/middlewares"
+	"tracingbook/models"
+	"tracingbook/seeds"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"

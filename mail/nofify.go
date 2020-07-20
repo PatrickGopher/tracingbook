@@ -2,10 +2,10 @@ package mail
 
 import (
 	"fmt"
-	"gohome_self/tracingbook/models"
 	"log"
 	"net/smtp"
 	"strings"
+	"tracingbook/models"
 )
 
 //type Notify interface {
@@ -45,7 +45,7 @@ func (nm *NotifyByMail) notify() bool {
 		"Subject:" + nm.Title + "\n\n" +
 		nm.Content
 	err := smtp.SendMail("smtp.gmail.com:587",
-		smtp.PlainAuth("", nm.From, "7dgM\"{xkH2hx_7gJ", "smtp.gmail.com"),
+		smtp.PlainAuth("", nm.From, "", "smtp.gmail.com"),
 		nm.From, []string{nm.To}, []byte(msg))
 
 	if err != nil {

@@ -2,9 +2,9 @@ package models
 
 import (
 	"errors"
-	"gohome_self/tracingbook/infrastructure"
 	"os"
 	"time"
+	"tracingbook/infrastructure"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/jinzhu/gorm"

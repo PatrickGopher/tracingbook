@@ -3,13 +3,13 @@ package controllers
 // import "C"
 import (
 	"errors"
-	"gohome_self/tracingbook/dtos"
-	"gohome_self/tracingbook/middlewares"
-	"gohome_self/tracingbook/models"
-	"gohome_self/tracingbook/services"
 	"net/http"
 	"strconv"
 	"strings"
+	"tracingbook/dtos"
+	"tracingbook/middlewares"
+	"tracingbook/models"
+	"tracingbook/services"
 
 	"github.com/gin-gonic/gin"
 )

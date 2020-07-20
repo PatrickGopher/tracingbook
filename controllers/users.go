@@ -2,10 +2,10 @@ package controllers
 
 import (
 	"errors"
-	"gohome_self/tracingbook/dtos"
-	"gohome_self/tracingbook/models"
-	"gohome_self/tracingbook/services"
 	"net/http"
+	"tracingbook/dtos"
+	"tracingbook/models"
+	"tracingbook/services"
 
 	"github.com/gin-gonic/gin"
 	"golang.org/x/crypto/bcrypt"

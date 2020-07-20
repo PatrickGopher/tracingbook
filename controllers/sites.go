@@ -1,12 +1,12 @@
 package controllers
 
 import (
-	"gohome_self/tracingbook/dtos"
-	"gohome_self/tracingbook/middlewares"
-	"gohome_self/tracingbook/models"
-	"gohome_self/tracingbook/services"
 	"net/http"
 	"strconv"
+	"tracingbook/dtos"
+	"tracingbook/middlewares"
+	"tracingbook/models"
+	"tracingbook/services"
 
 	"github.com/gin-gonic/gin"
 )

@@ -2,9 +2,9 @@ package controllers
 
 import (
 	"errors"
-	"gohome_self/tracingbook/dtos"
-	"gohome_self/tracingbook/services"
 	"net/http"
+	"tracingbook/dtos"
+	"tracingbook/services"
 
 	"github.com/gin-gonic/gin"
 )

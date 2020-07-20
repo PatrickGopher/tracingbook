@@ -1,7 +1,7 @@
 package services
 
 import (
-	"gohome_self/tracingbook/infrastructure"
+	"tracingbook/infrastructure"
 )
 
 func CreateOne(data interface{}) error {

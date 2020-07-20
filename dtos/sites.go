@@ -1,8 +1,8 @@
 package dtos
 
 import (
-	"gohome_self/tracingbook/models"
 	"net/http"
+	"tracingbook/models"
 )
 
 type CreateSiteRequestDto struct {

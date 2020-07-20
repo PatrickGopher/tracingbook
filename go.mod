@@ -1,4 +1,4 @@
-module gohome_self/tracingbook
+module tracingbook
 
 go 1.14
 

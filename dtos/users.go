@@ -1,7 +1,7 @@
 package dtos
 
 import (
-	"gohome_self/tracingbook/models"
+	"tracingbook/models"
 )
 
 type RegisterRequestDto struct {

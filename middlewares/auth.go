@@ -2,11 +2,11 @@ package middlewares
 
 import (
 	"fmt"
-	"gohome_self/tracingbook/infrastructure"
-	"gohome_self/tracingbook/models"
 	"net/http"
 	"os"
 	"strings"
+	"tracingbook/infrastructure"
+	"tracingbook/models"
 
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"

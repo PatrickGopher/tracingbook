@@ -4,8 +4,6 @@ import (
 	"bytes"
 	"compress/gzip"
 	"fmt"
-	"gohome_self/tracingbook/mail"
-	"gohome_self/tracingbook/models"
 	"io/ioutil"
 	"log"
 	"math/rand"
@@ -14,6 +12,8 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"tracingbook/mail"
+	"tracingbook/models"
 
 	"github.com/gocolly/colly"
 	"golang.org/x/text/encoding/simplifiedchinese"

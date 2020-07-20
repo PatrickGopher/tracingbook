@@ -1,8 +1,8 @@
 package services
 
 import (
-	"gohome_self/tracingbook/infrastructure"
-	"gohome_self/tracingbook/models"
+	"tracingbook/infrastructure"
+	"tracingbook/models"
 )
 
 func FetchBooksPage(page int, page_size int) ([]models.Book, int, []int, error) {

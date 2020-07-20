@@ -1,8 +1,8 @@
 package services
 
 import (
-	"gohome_self/tracingbook/infrastructure"
-	"gohome_self/tracingbook/models"
+	"tracingbook/infrastructure"
+	"tracingbook/models"
 )
 
 func FetchSitesPage(userId uint32, page, pageSize int) (sites []models.Site, totalSitesCount int, err error) {
