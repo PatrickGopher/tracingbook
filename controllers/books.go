@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
+	"tracingbook/crawler"
 	"tracingbook/dtos"
 	"tracingbook/middlewares"
 	"tracingbook/models"
@@ -16,13 +17,18 @@ import (
 
 func RegisterBookRoutes(router *gin.RouterGroup) {
 	router.GET("/", BookList)
-	router.GET("/:slug", GetBookDetailsBySlug)
+	router.GET("/detail/:slug", GetBookDetailsBySlug)
+	router.GET("/fetchUpdates", GetUpdates)
 
 	router.Use(middlewares.EnforceAuthenticatedMiddleware())
 	{
 		router.POST("/", CreateBook)
 		router.DELETE("/:slug", BookDelete)
 	}
+}
+
+func GetUpdates(context *gin.Context) {
+	crawler.FetchBooks()
 }
 
 func BookList(c *gin.Context) {

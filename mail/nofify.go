@@ -25,11 +25,10 @@ func (nm *NotifyByMail) NotifyUpdates(updateItems []models.UpdateItem) {
 		return
 	}
 	updates := make([]string, len(updateItems))
-	title := ""
-	for _, item := range updateItems {
-		update := fmt.Sprintf("书名: %s, 最新章节:%s, 点击: %s", item.BookName, item.LatestName, item.BookUrl)
-		updates = append(updates, update)
-		title += item.BookName + ","
+	title := updateItems[0].BookName + " 最新更新:" + updateItems[0].LatestName
+	for i, item := range updateItems {
+		update := fmt.Sprintf("最新章节:%s, 点击: %s \n", item.LatestName, item.BookUrl)
+		updates[i] = update
 	}
 	NML.Content = strings.Join(updates, "\n")
 	if len(title) > 200 {
@@ -45,7 +44,7 @@ func (nm *NotifyByMail) notify() bool {
 		"Subject:" + nm.Title + "\n\n" +
 		nm.Content
 	err := smtp.SendMail("smtp.gmail.com:587",
-		smtp.PlainAuth("", nm.From, "", "smtp.gmail.com"),
+		smtp.PlainAuth("", nm.From, nm.Pass, "smtp.gmail.com"),
 		nm.From, []string{nm.To}, []byte(msg))
 
 	if err != nil {

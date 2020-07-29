@@ -119,6 +119,7 @@ func main() {
 
 	controllers.RegisterUserRoutes(apiRouteGroup.Group("/users"))
 	controllers.RegisterPageRoutes(apiRouteGroup.Group("/"))
+	controllers.RegisterBookRoutes(apiRouteGroup.Group("/book"))
 
 	mail.NML.Pass = os.Getenv("MIXIU_PASS")
 	crawler.InitDingDian()

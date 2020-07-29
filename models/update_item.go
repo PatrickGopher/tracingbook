@@ -9,14 +9,14 @@ import (
 
 type UpdateItem struct {
 	gorm.Model
-	SiteId       uint   `gorm:"not null"`
-	BookId       uint   `gorm:"not null"`
-	BookName     string `gorm:"not null"`
-	Slug         string `gorm:"not null"`
-	LatestName   string `gorm:"not null"`
-	LatestNumber int64  `gorm:"not null"`
-	BookUrl      string `gorm:"not null"`
-	UserId       uint32 `gorm:"default:null"`
+	SiteId        uint   `gorm:"not null"`
+	BookId        uint   `gorm:"not null"`
+	BookName      string `gorm:"not null"`
+	Slug          string `gorm:"not null"`
+	LatestName    string `gorm:"not null"`
+	LatestChapter string `gorm:"not null"`
+	BookUrl       string `gorm:"not null"`
+	UserId        uint32 `gorm:"default:null"`
 }
 
 func (updateItem *UpdateItem) BeforeSave() (err error) {
